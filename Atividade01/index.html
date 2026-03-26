@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Validação de Formulários</title>
+    <style>
+        .erro {
+            color: red;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercício de Validação de Formulários</h1>
+
+    <form id="f" method="post" action="https://postman-echo.com/post">
+
+        <label for="nome"> Nome: </label>
+        <input type="text" id="nome" name="nome" size="40" maxlength="40" />
+        <span id="msg-nome" class="erro"></span>
+
+        Tipo de Pessoa:
+        <input type="radio" id="pfisica" name="tipo" value="fisica" />
+        <label for="pfisica"> Fisica </label>
+        <input type="radio" id="pjuridica" name="tipo" value="juridica" />
+        <label for="pjuridica"> Jurídica </label>
+        <span id="msg-tipo" class="erro"></span>
+
+        <label for="cpf_cnpj"> CPF/CNPJ: </label>
+        <input type="text" id="cpf_cnpj" name="cpf_cnpj" />
+        <span id="msg-cpf_cnpj" class="erro"></span>
+
+        <br />
+        <input type="submit" id="enviar" value="   Enviar   " />
+        <br /><br />
+        <input type="reset" id="limpar" value="   Limpar   " />
+    </form>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
